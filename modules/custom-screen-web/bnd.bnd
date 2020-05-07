@@ -1,0 +1,4 @@
+Bundle-Name: custom-screen-web
+Bundle-SymbolicName: custom.screen.web
+Bundle-Version: 1.0.0
+Export-Package: custom.screen.web.constants

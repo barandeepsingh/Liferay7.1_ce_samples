@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_1_0.dtd">
+
+<service-builder package-path="com.advent.external.core">
+	<namespace>External</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" 
+		remote-service="false" session-factory="sampleSessionFactory" table="foo" 
+		tx-manager="sampleTransactionManager uuid="true""> -->
+	<entity data-source="extDataSource" local-service="true"
+		name="Product" table="product" remote-service="true" uuid="false">
+		<!-- PK fields -->
+
+		<column name="productid" db-name="productid" primary="true"
+			type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupid" db-name="groupid" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyid" db-name="companyid" type="long" />
+		<column name="userid" db-name="userid" type="long" />
+		<column name="username" db-name="username" type="String" />
+		
+		<!-- Other fields -->
+
+		<column name="productname" db-name="productname" type="String" />
+		<column name="productdescription" db-name="productdescription"
+			type="String" />
+	</entity>
+</service-builder>

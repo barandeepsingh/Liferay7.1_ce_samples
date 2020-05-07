@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.advent.external.core.service.impl.ProductLocalServiceImpl" id="com.advent.external.core.service.ProductLocalService" />
+	<bean class="com.advent.external.core.service.impl.ProductServiceImpl" id="com.advent.external.core.service.ProductService" />
+	<bean class="com.advent.external.core.service.persistence.impl.ProductPersistenceImpl" id="com.advent.external.core.service.persistence.ProductPersistence" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.advent.external.core.service.persistence.impl.ProductFinderImpl" id="com.advent.external.core.service.persistence.ProductFinder" parent="basePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.advent.external.core.model.Product">
+		<field name="productid" type="long" />
+		<field name="groupid" type="long" />
+		<field name="companyid" type="long" />
+		<field name="userid" type="long" />
+		<field name="username" type="String" />
+		<field name="productname" type="String" />
+		<field name="productdescription" type="String" />
+	</model>
+</model-hints>

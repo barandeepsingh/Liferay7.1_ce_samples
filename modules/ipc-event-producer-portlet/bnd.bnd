@@ -1,0 +1,4 @@
+Bundle-Name: ipc-event-producer-portlet
+Bundle-SymbolicName: ipc.event.producer.portlet
+Bundle-Version: 1.0.0
+Export-Package: ipc.event.producer.portlet.constants

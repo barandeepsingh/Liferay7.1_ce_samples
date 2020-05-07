@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_External_ProductService" provider="java:RPC" style="rpc" use="encoded">
+		<arrayMapping xmlns:ns="urn:http.service.core.external.advent.com" xmlns:cmp-ns="http://model.core.external.advent.com" qname="ns:ArrayOf_tns2_ProductSoap" type="java:com.advent.external.core.model.ProductSoap[]" innerType="cmp-ns:ProductSoap" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></arrayMapping>
+		<typeMapping xmlns:ns="http://model.core.external.advent.com" qname="ns:ProductSoap" type="java:com.advent.external.core.model.ProductSoap" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"></typeMapping>
+		<operation xmlns:operNS="urn:http.service.core.external.advent.com" xmlns:rtns="urn:http.service.core.external.advent.com" xmlns:tns2="http://model.core.external.advent.com" name="getAllProducts" qname="operNS:getAllProducts" returnQName="getAllProductsReturn" returnType="rtns:ArrayOf_tns2_ProductSoap" returnItemType="tns2:ProductSoap" soapAction=""> </operation>
+		<operation xmlns:operNS="urn:http.service.core.external.advent.com" xmlns:rtns="http://model.core.external.advent.com" name="getProductById" qname="operNS:getProductById" returnQName="getProductByIdReturn" returnType="rtns:ProductSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="productId" type="tns:long"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.core.external.advent.com" xmlns:rtns="http://model.core.external.advent.com" name="getProductByName" qname="operNS:getProductByName" returnQName="getProductByNameReturn" returnType="rtns:ProductSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="productName" type="tns:string"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.core.external.advent.com" xmlns:rtns="urn:http.service.core.external.advent.com" xmlns:tns2="http://model.core.external.advent.com" name="getProductsLike" qname="operNS:getProductsLike" returnQName="getProductsLikeReturn" returnType="rtns:ArrayOf_tns2_ProductSoap" returnItemType="tns2:ProductSoap" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="productName" type="tns:string"></parameter>
+		</operation>
+		<operation xmlns:operNS="urn:http.service.core.external.advent.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="sayHelloWorld" qname="operNS:sayHelloWorld" returnQName="sayHelloWorldReturn" returnType="rtns:string" soapAction="">
+			<parameter xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="worldName" type="tns:string"></parameter>
+		</operation>
+		<parameter name="allowedMethods" value="getAllProducts getProductById getProductByName getProductsLike sayHelloWorld" />
+		<parameter name="className" value="com.advent.external.core.service.http.ProductServiceSoap" />
+		<parameter name="schemaUnqualified" value="http://model.core.external.advent.com,urn:http.service.core.external.advent.com" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ProductServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ProductServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_External_ProductService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.core.external.advent.com" />
+	</service>
+</deployment>

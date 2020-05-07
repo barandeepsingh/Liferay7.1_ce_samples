@@ -1,0 +1,4 @@
+Bundle-Name: ipc-prp-producer-portlet
+Bundle-SymbolicName: ipc.prp.producer.portlet
+Bundle-Version: 1.0.0
+Export-Package: ipc.prp.producer.portlet.constants

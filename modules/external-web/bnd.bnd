@@ -1,0 +1,5 @@
+Bundle-Name: external-web
+Bundle-SymbolicName: external.web
+Bundle-Version: 1.0.0
+Export-Package: external.web.constants
+-metatype: *

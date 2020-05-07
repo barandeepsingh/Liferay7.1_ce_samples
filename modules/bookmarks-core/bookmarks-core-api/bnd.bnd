@@ -1,0 +1,10 @@
+Bundle-Name: bookmarks-core-api
+Bundle-SymbolicName: com.advent.bookmarks.core.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.advent.bookmarks.core.exception,\
+	com.advent.bookmarks.core.model,\
+	com.advent.bookmarks.core.service,\
+	com.advent.bookmarks.core.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../bookmarks-core-service/service.xml

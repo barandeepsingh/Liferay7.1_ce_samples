@@ -1,0 +1,4 @@
+Bundle-Name: ipc-event-consumer1-portlet
+Bundle-SymbolicName: ipc.event.consumer1.portlet
+Bundle-Version: 1.0.0
+Export-Package: ipc.event.consumer1.portlet.constants

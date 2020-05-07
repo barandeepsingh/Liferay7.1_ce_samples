@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.advent.bookmarks.core.service.impl.BookmarksEntryLocalServiceImpl" id="com.advent.bookmarks.core.service.BookmarksEntryLocalService" />
+	<bean class="com.advent.bookmarks.core.service.impl.BookmarksEntryServiceImpl" id="com.advent.bookmarks.core.service.BookmarksEntryService" />
+	<bean class="com.advent.bookmarks.core.service.persistence.impl.BookmarksEntryPersistenceImpl" id="com.advent.bookmarks.core.service.persistence.BookmarksEntryPersistence" parent="basePersistence" />
+	<bean class="com.advent.bookmarks.core.service.impl.BookmarksFolderLocalServiceImpl" id="com.advent.bookmarks.core.service.BookmarksFolderLocalService" />
+	<bean class="com.advent.bookmarks.core.service.impl.BookmarksFolderServiceImpl" id="com.advent.bookmarks.core.service.BookmarksFolderService" />
+	<bean class="com.advent.bookmarks.core.service.persistence.impl.BookmarksFolderPersistenceImpl" id="com.advent.bookmarks.core.service.persistence.BookmarksFolderPersistence" parent="basePersistence" />
+</beans>

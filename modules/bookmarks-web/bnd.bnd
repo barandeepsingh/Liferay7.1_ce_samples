@@ -1,0 +1,4 @@
+Bundle-Name: bookmarks-web
+Bundle-SymbolicName: com.advent.bookmarks.web
+Bundle-Version: 1.0.0
+Export-Package: com.advent.bookmarks.web.constants

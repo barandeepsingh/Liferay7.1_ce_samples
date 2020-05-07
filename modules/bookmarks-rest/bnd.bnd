@@ -1,0 +1,4 @@
+Bundle-Name: bookmarks-rest
+Bundle-SymbolicName: com.advent.bookmarks.rest
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration

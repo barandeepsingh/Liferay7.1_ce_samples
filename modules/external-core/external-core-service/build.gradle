@@ -1,0 +1,19 @@
+dependencies {
+	compileOnly group: "biz.aQute.bnd", name: "biz.aQute.bndlib"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+compile group: 'org.springframework', name: 'spring-jdbc', version: '4.0.6.RELEASE'
+compile group: 'com.liferay', name: 'com.liferay.portal.dao.orm.custom.sql', version: '1.0.20'
+compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+	compileOnly project(":modules:external-core:external-core-api")
+	
+}
+
+buildService {
+	apiDir = "../external-core-api/src/main/java"
+}
+
+group = "com.advent.external.core"
+
+

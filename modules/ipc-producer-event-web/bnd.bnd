@@ -1,0 +1,4 @@
+Bundle-Name: ipc-producer-event-web
+Bundle-SymbolicName: ipc.producer.event.web
+Bundle-Version: 1.0.0
+Export-Package: ipc.producer.event.web.constants
